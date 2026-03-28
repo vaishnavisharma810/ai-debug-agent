@@ -24,6 +24,7 @@ A privacy-first AI agent that analyzes backend logs and suggests root causes and
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
+```
 
 ## 🧠 How It Works
 
