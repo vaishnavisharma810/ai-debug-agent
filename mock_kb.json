@@ -1,0 +1,14 @@
+[
+  {
+    "error": "NullPointerException",
+    "cause": "Object is null",
+    "fix": "Add null check before usage",
+    "component": "FacilityService"
+  },
+  {
+    "error": "TimeoutException",
+    "cause": "Service took too long to respond",
+    "fix": "Increase timeout or optimize API",
+    "component": "API Layer"
+  }
+]
