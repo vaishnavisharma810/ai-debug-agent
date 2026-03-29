@@ -1,14 +1,20 @@
 [
   {
     "error": "NullPointerException",
-    "cause": "Object is null",
-    "fix": "Add null check before usage",
-    "component": "FacilityService"
+    "cause": "Object reference is null",
+    "fix": "Add null check before accessing object",
+    "component": "Service Layer"
   },
   {
-    "error": "TimeoutException",
-    "cause": "Service took too long to respond",
-    "fix": "Increase timeout or optimize API",
+    "error": "Timeout",
+    "cause": "Service response delayed",
+    "fix": "Increase timeout or optimize API performance",
     "component": "API Layer"
+  },
+  {
+    "error": "Database connection failed",
+    "cause": "Unable to connect to DB",
+    "fix": "Check DB credentials and network connectivity",
+    "component": "Database Layer"
   }
 ]

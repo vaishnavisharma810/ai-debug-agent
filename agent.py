@@ -8,7 +8,7 @@ def search_kb(logs):
         kb = json.load(f)
 
     for item in kb:
-        if item["error"].lower() in logs.lower():
+        if any(word in logs.lower() for word in item["error"].lower().split()):
             return item
     return None
 
