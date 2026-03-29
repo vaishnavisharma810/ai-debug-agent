@@ -63,9 +63,19 @@ Confidence:
 <percentage>
 """
 
-    response = ollama.chat(
-        model='tinyllama',
-        messages=[{"role": "user", "content": prompt}]
-    )
+    try:
+        response = ollama.chat(
+            model='tinyllama',
+            messages=[{"role": "user", "content": prompt}]
+        )
 
-    return response['message']['content']
+        return response['message']['content']
+
+    except Exception as e:
+        return """
+            ⚠️ AI Model not available in deployed environment.
+
+            Showing Knowledge Base result only.
+
+            👉 For full AI-powered analysis, please run this application locally using Ollama.
+            """
