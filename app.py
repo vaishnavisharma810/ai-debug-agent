@@ -6,8 +6,12 @@ st.set_page_config(page_title="AI Debug Agent", layout="centered")
 st.title("🤖 AI Debugging Agent")
 st.write("Analyze backend logs with AI + Knowledge Base")
 
-# Input box
-logs = st.text_area("📥 Paste your logs here", height=200)
+uploaded_file = st.file_uploader("📁 Upload log file")
+
+if uploaded_file:
+    logs = uploaded_file.read().decode("utf-8")
+else:
+    logs = st.text_area("📥 Paste your logs here", height=200)
 
 # Button
 if st.button("Analyze"):
